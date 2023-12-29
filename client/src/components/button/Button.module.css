@@ -1,0 +1,22 @@
+.button {
+  border-radius: 100px;
+  border-width: 4px;
+  background-color: black;
+  color: aliceblue;
+}
+.button:hover {
+  background-color: rgba(26, 114, 4, 0.993);
+  border-color: aliceblue;
+}
+.input {
+  border-width: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background-color: black;
+  color: aliceblue;
+  cursor: pointer;
+  text-align: center;
+}
+.input:hover {
+  border-color: aliceblue;
+}

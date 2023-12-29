@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center; /* Centra horizontalmente */
+  background-color: rgba(30, 31, 30, 0.788);
+  margin: 50px;
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 50px;
+  border: 10px solid #f0f8ff; /* Borde de la tarjeta */
+  width: 88vw;
+}
+
+.image {
+  width: 350px;
+  margin-right: 250px; /* Espacio entre la imagen y el texto a la derecha */
+  margin-left: 100px; /* Espacio entre la imagen y el texto a la derecha */
+  border-radius: 40px;
+}
+.text {
+  color: aliceblue;
+}

@@ -1,0 +1,63 @@
+.conteiner {
+  width: 200px; /* Ancho de la tarjeta */
+  border: 10px solid #f0f8ff; /* Borde de la tarjeta */
+  border-radius: 20px; /* Bordes redondeados de la tarjeta */
+  padding: 20px; /* Espacio interno de la tarjeta */
+  margin: 10px; /* Margen exterior de la tarjeta */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: rgba(30, 31, 30, 0.788);
+  transition: background-color 0.4s ease-in-out; /* Agrega una transición suave para el sombreado */
+}
+.conteiner:hover {
+  background-color: rgba(
+    18,
+    202,
+    18,
+    0.788
+  ); /* Aplica un sombreado cuando el cursor está sobre la tarjeta */
+}
+.image {
+  border-radius: 40px;
+  width: 150px;
+}
+.name {
+  color: aliceblue;
+}
+
+.button {
+  margin: 15px;
+  background-color: black;
+  color: aliceblue;
+}
+.button:hover {
+  background-color: rgba(179, 7, 7, 0.993);
+}
+.buttonFav {
+  margin: 15px;
+  background-color: black;
+  color: aliceblue;
+}
+.buttonFav:hover {
+  background-color: rgba(247, 32, 193, 0.993);
+}
+
+.statusAlive {
+  background-color: green;
+  color: aliceblue;
+  border-radius: 10px;
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid #f0f8ff;
+}
+.statusDead {
+  background-color: red;
+  color: aliceblue;
+  border-radius: 10px;
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid #f0f8ff;
+}

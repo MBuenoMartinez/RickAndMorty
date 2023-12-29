@@ -1,0 +1,16 @@
+body {
+  flex-direction: column;
+
+  background-image: url(../src/images/RickandMortyBackground.jpeg);
+  /* Ajusta el tamaño de la imagen para cubrir toda la página */
+  background-size: cover;
+
+  /* Fija la imagen de fondo para que no se desplace con el contenido */
+  background-attachment: fixed;
+
+  /* Centra la imagen de fondo vertical y horizontalmente */
+  background-position: center center;
+
+  /* Define un color de fondo de respaldo en caso de que la imagen no se cargue o no cubra toda la página */
+  background-color: #f0f0f0;
+}

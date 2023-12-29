@@ -1,0 +1,6 @@
+.cards {
+  display: flex; /* Utiliza un contenedor flex para alinear los elementos en línea */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan automáticamente si no caben en una fila */
+  justify-content: flex-start; /* Alinea las tarjetas en la parte superior del contenedor */
+  margin-top: 8px;
+}

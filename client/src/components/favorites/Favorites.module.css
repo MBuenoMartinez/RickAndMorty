@@ -1,0 +1,33 @@
+.favorites {
+  display: flex; /* Utiliza un contenedor flex para alinear los elementos en línea */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan automáticamente si no caben en una fila */
+  justify-content: flex-start; /* Alinea las tarjetas en la parte superior del contenedor */
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los select */
+  padding: 20px;
+  padding-bottom: 80px;
+}
+.buttonSelect {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: black;
+  border-color: black;
+  appearance: none;
+  text-align: center;
+  border-width: 4px;
+  cursor: pointer;
+}
+.buttonSelect:hover {
+  background-color: rgba(26, 114, 4, 0.993);
+  border-color: aliceblue;
+  transition: 200ms;
+}
+.selectOption {
+  background-color: black;
+  color: aliceblue;
+}

@@ -1,0 +1,11 @@
+.conteiner {
+  background-color: rgba(18, 202, 18, 0.788);
+  /* Establece el ancho del componente al 100% del ancho de la ventana */
+  width: 97vw;
+  /* Ocupa toda la altura del contenido dentro del componente */
+  height: 100%;
+  display: flex;
+  justify-content: space-around; /* Coloca los elementos al principio y al final del contenedor */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  padding: 20px; /* Agrega espacio alrededor de los elementos */
+}
