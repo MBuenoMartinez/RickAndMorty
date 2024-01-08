@@ -8,8 +8,8 @@ const login = require("../controllers/login");
 const router = Router();
 router.get("/character/:id", getCharById);
 
-// router.get("/login", login);
-router.post("/login", postUser);
+router.get("/login", login);
+router.post("/singUp", postUser);
 router.post("/favorites", postFav);
 router.delete("/favorites/:id", deleteFav);
 

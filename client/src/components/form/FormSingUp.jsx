@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Validations from "./validations";
 import styles from "./Form.module.css";
-import image from "../../images/loginImage.png";
+
 import { Link } from "react-router-dom";
-const Form = ({ login }) => {
+const FormSingUp = ({ singUp }) => {
   const [userData, setUserData] = useState({
     email: "",
     password: "",
@@ -21,13 +21,13 @@ const Form = ({ login }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    login(userData);
+    singUp(userData);
   };
 
   return (
     <div className={styles.conteiner}>
       <form onSubmit={handleSubmit}>
-        <img src={image} alt="loginImage" className={styles.image} />
+        <h2>Create your account</h2>
 
         <input
           className={styles.input}
@@ -51,10 +51,9 @@ const Form = ({ login }) => {
           <p className={styles.errors}>{errors.password}</p>
         )}
         <br />
-
         <div>
-          <Link to={"/singUp"}>
-            <h4>Sing Up</h4>
+          <Link to={"/login"}>
+            <h4>Sing In</h4>
           </Link>
         </div>
         <button
@@ -66,10 +65,10 @@ const Form = ({ login }) => {
             errors.password
           }
         >
-          Submit
+          Create
         </button>
       </form>
     </div>
   );
 };
-export default Form;
+export default FormSingUp;

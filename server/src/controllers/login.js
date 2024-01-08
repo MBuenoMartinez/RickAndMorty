@@ -3,7 +3,7 @@ const { User } = require("../DB_connection");
 const login = async (req, res) => {
   try {
     const { email, password } = req.query;
-
+    console.log(req.query);
     // Verificar si email o password están ausentes
     if (!email || !password) {
       return res.status(400).json({ error: "Faltan datos" });

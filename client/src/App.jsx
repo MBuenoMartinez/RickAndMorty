@@ -7,6 +7,7 @@ import About from "./components/about/About";
 import Detail from "./components/detail/Detail";
 import Form from "./components/form/Form";
 import Favorites from "./components/favorites/Favorites";
+import FormSingUp from "./components/form/FormSingUp";
 /*hooks*/
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
@@ -23,9 +24,7 @@ const App = () => {
 
   const onSearch = async (id) => {
     try {
-      const { data } = await axios(
-        `http://localhost:3001/rickandmorty/character/${id}`
-      );
+      const { data } = await axios(`/character/${id}`);
       if (!characters.some((character) => character.id == data.id)) {
         setCharacters((oldChars) => [...oldChars, data]);
       } else {
@@ -44,11 +43,30 @@ const App = () => {
   };
   const login = async (userData) => {
     try {
-      const URL = `http://localhost:3001/rickandmorty/login`;
-      const { data } = await axios.post(URL, userData);
+      const urlLogin = `/login?email=${userData.email}&password=${userData.password}`;
+      const response = await axios.get(urlLogin);
 
-      console.log(data);
-      setAccess(data[0]);
+      const { data } = response;
+      if (data.access) {
+        setAccess(data.access);
+        navigate("/home");
+      }
+    } catch (error) {
+      if (error.response && error.response.status === 404) {
+        return window.alert(
+          "Este usuario no existe, crea uno clikendo en sing up"
+        );
+      }
+      throw Error(error.message);
+    }
+  };
+
+  const singUp = async (userData) => {
+    try {
+      const urlSingUp = `/singUp`;
+      await axios.post(urlSingUp, userData);
+
+      setAccess(true);
       access && navigate("/home");
     } catch (error) {
       throw Error(error.message);
@@ -61,7 +79,9 @@ const App = () => {
 
   return (
     <div className={style.body}>
-      {location.pathname !== "/login" ? <Nav onSearch={onSearch} /> : ""}
+      {location.pathname !== "/login" && location.pathname !== "/singUp" && (
+        <Nav onSearch={onSearch} />
+      )}
 
       <Routes>
         <Route
@@ -71,6 +91,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/login" element={<Form login={login} />} />
+        <Route path="/singUp" element={<FormSingUp singUp={singUp} />} />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </div>

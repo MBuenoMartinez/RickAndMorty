@@ -5,7 +5,10 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import store from "./redux/store/store.js";
 import { Provider } from "react-redux";
-
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001/rickandmorty";
+// axios.defaults.baseURL =
+//   "https://f1-drivers-app-back-production.up.railway.app/";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <BrowserRouter>

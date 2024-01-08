@@ -6,12 +6,11 @@ import {
   ORDER,
 } from "../typeActions/type_actions";
 
-const URL_BASE = "http://localhost:3001/rickandmorty/favorites";
-
 export const addFav = (character) => {
+  const endpoint = "/favorites";
   return async (dispatch) => {
     try {
-      const { data } = await axios.post(URL_BASE, character);
+      const { data } = await axios.post(endpoint, character);
       return dispatch({
         type: ADD_FAV,
         payload: data,
@@ -23,9 +22,10 @@ export const addFav = (character) => {
 };
 
 export const removeFav = (id) => {
+  const endpoint = `/${id}`;
   return async (dispatch) => {
     try {
-      const { data } = await axios.delete(`${URL_BASE}/${id}`);
+      const { data } = await axios.delete(endpoint);
       return dispatch({
         type: REMOVE_FAV,
         payload: data,
