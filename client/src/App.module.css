@@ -1,7 +1,7 @@
 body {
   flex-direction: column;
 
-  background-image: url(../src/images/RickandMortyBackground.jpeg);
+  background-image: url(/images/RickandMortyBackground.jpeg);
   /* Ajusta el tamaño de la imagen para cubrir toda la página */
   background-size: cover;
 

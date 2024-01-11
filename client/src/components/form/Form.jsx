@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Validations from "./validations";
 import styles from "./Form.module.css";
-import image from "../../images/loginImage.png";
 import { Link } from "react-router-dom";
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
@@ -27,7 +26,11 @@ const Form = ({ login }) => {
   return (
     <div className={styles.conteiner}>
       <form onSubmit={handleSubmit}>
-        <img src={image} alt="loginImage" className={styles.image} />
+        <img
+          src={"/images/loginImage.png"}
+          alt="loginImage"
+          className={styles.image}
+        />
 
         <input
           className={styles.input}

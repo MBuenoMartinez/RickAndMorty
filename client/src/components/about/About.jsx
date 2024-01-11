@@ -1,10 +1,14 @@
 import styles from "../about/About.module.css";
-import image from "/src/images/martin.png";
+
 const About = () => {
   return (
     <div className={styles.container}>
       <div>
-        <img src={image} alt="creatorImage" className={styles.image} />
+        <img
+          src={"/images/martin.png"}
+          alt="creatorImage"
+          className={styles.image}
+        />
       </div>
       <div className={styles.text}>
         <h1>Creador</h1>
